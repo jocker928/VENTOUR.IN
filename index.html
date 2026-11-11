@@ -4,7 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>VENTOUR | Tours & Travels</title>
-<link rel="icon" type="image/svg+xml" href="favicon.svg">
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
@@ -75,8 +74,6 @@ nav a:hover{color:#f000d8}
  text-decoration:none;
  border-radius:30px;
  font-weight:bold;
- border:0;
- cursor:pointer;
 }
 
 section{padding:75px 7%}
@@ -175,7 +172,6 @@ section{padding:75px 7%}
  max-width:800px;
  margin:auto;
 }
-.about h2{color:#fff;margin-bottom:15px}
 
 .location{
  text-align:center;
@@ -243,7 +239,7 @@ footer{
 
 <header>
  <div class="logo">
-  <img src="ventour-logo.svg" alt="VENTOUR airplane and globe logo">
+  <img src="ventour-logo.png" alt="VENTOUR Logo">
   <span>VENTOUR.IN</span>
  </div>
  <nav>
@@ -284,19 +280,19 @@ footer{
 
  <div class="story-grid">
   <div class="story">
-   <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800" alt="Mountain landscape">
+   <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800">
    <div><h3>Mountain Adventures</h3>
    <p>Explore beautiful mountains, peaceful valleys and breathtaking landscapes.</p></div>
   </div>
 
   <div class="story">
-   <img src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?w=800" alt="Colourful coastal village">
+   <img src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?w=800">
    <div><h3>Beautiful Coastal Life</h3>
    <p>Discover colourful coastal villages, beaches and local traditions.</p></div>
   </div>
 
   <div class="story">
-   <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=800" alt="Traveller exploring a landscape">
+   <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=800">
    <div><h3>Adventure Around The World</h3>
    <p>Every destination has a unique story waiting to be discovered.</p></div>
   </div>
@@ -321,14 +317,14 @@ footer{
   <p>Chattanchal, Kasaragod, Kerala, India</p>
  </div>
 
- <iframe class="map" title="Map showing VENTOUR office in Chattanchal, Kasaragod"
+ <iframe class="map"
  src="https://www.google.com/maps?q=Chattanchal%2C%20Kasaragod%2C%20Kerala&output=embed"
  loading="lazy">
  </iframe>
 
  <a class="btn"
  href="https://maps.app.goo.gl/3jTYgSvjXR7CcZR78?g_st=ic"
- target="_blank" rel="noopener noreferrer">
+ target="_blank">
  GET DIRECTIONS
  </a>
 </section>
@@ -346,23 +342,23 @@ footer{
 
  <a class="btn"
  href="https://wa.me/919747900337"
- target="_blank" rel="noopener noreferrer">WhatsApp 1</a>
+ target="_blank">WhatsApp 1</a>
 
  <a class="btn"
  href="https://wa.me/919747900338"
- target="_blank" rel="noopener noreferrer">WhatsApp 2</a>
+ target="_blank">WhatsApp 2</a>
 </section>
 
 <footer>
- <h3>VENTOUR TOURS &amp; TRAVELS</h3>
+ <h3>VENTOUR TOURS & TRAVELS</h3>
  <p>Explore The World 🌍</p>
  <p>Prepared by Muhammed Ziab</p>
- <p>© <span id="year"></span> VENTOUR.IN</p>
+ <p>© 2026 VENTOUR.IN</p>
 </footer>
 
 <a class="whatsapp"
  href="https://wa.me/919747900337"
- target="_blank" rel="noopener noreferrer">WhatsApp ✆</a>
+ target="_blank">WhatsApp ✆</a>
 
 <script>
 const countries = [
@@ -452,8 +448,8 @@ const grid=document.getElementById("countryGrid");
 
 countries.forEach((c,i)=>{
  grid.innerHTML+=`
- <div class="country" onclick="showCountry(${i})" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();showCountry(${i})}">
- <img src="https://images.unsplash.com/${c.photo}?auto=format&fit=crop&w=800&q=85" alt="${c.name}">
+ <div class="country" onclick="showCountry(${i})">
+ <img src="https://images.unsplash.com/${c.photo}?auto=format&fit=crop&w=800&q=85">
  <h3>${c.flag} ${c.name}</h3>
  </div>`;
 });
@@ -466,7 +462,7 @@ function showCountry(i){
 
  detail.innerHTML=`
  <h2>${c.flag} ${c.name}</h2>
- <img src="https://images.unsplash.com/${c.photo}?auto=format&fit=crop&w=1400&q=90" alt="Scenery in ${c.name}">
+ <img src="https://images.unsplash.com/${c.photo}?auto=format&fit=crop&w=1400&q=90">
  <h2>About ${c.name}</h2>
  <p>${c.intro}</p>
 
@@ -477,13 +473,13 @@ function showCountry(i){
  <div class="places">
  ${c.places.map(p=>`
  <div class="place">
- <img src="https://images.unsplash.com/${p[1]}?auto=format&fit=crop&w=700&q=85" alt="${p[0]}">
+ <img src="https://images.unsplash.com/${p[1]}?auto=format&fit=crop&w=700&q=85">
  <h3>${p[0]}</h3>
  <p>${p[2]}</p>
  </div>`).join("")}
  </div>
 
- <a class="btn" target="_blank" rel="noopener noreferrer"
+ <a class="btn" target="_blank"
  href="https://wa.me/919747900337?text=${encodeURIComponent("Hello VENTOUR.IN, I want to travel to "+c.name+". Please share details.")}">
  Enquire about ${c.name}
  </a>
@@ -494,8 +490,6 @@ function showCountry(i){
 
  detail.scrollIntoView({behavior:"smooth"});
 }
-
-document.getElementById("year").textContent=new Date().getFullYear();
 </script>
 
 </body>
