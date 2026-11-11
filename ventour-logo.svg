@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 180" role="img" aria-labelledby="title">
+<title id="title">VENTOUR airplane and globe logo</title>
+<g fill="none" stroke="#fff" stroke-width="8" stroke-linecap="butt">
+  <path d="M22 86A66 66 0 0 1 88 20M101 20a66 66 0 0 1 66 66M155 103a66 66 0 0 1-49 48M84 150a66 66 0 0 1-62-64"/>
+  <circle cx="177" cy="86" r="64" stroke-width="8" stroke-dasharray="105 12 105 12" transform="rotate(-10 177 86)"/>
+  <circle cx="177" cy="86" r="48" stroke-width="5"/>
+</g>
+<path fill="#fff" d="M84 43c2-3 5-3 7 0l8 40 34 17c3 2 2 5-1 6l-34-5-3 35-8 7-8-7-3-35-34 5c-3-1-4-4-1-6l34-17 9-40z"/>
+<path fill="#fff" d="M158 57c7-8 17-13 29-14l-2 14 15 9-7 11-16-6-12 9-7-7 7-11-7-5zm-10 33 12-10 11 8-2 13-12 7-8-7zm26 12 14-7 12 9-2 13-12 7-12-8zm-23 23 14-9 12 6-1 11-13 4-10-4z"/>
+</svg>
