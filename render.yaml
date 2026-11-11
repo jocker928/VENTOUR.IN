@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: ventour-in
+    runtime: static
+    staticPublishPath: ./
+    buildCommand: ""
