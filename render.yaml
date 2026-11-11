@@ -4,3 +4,7 @@ services:
     runtime: static
     staticPublishPath: ./
     buildCommand: ""
+    routes:
+      - type: rewrite
+        source: /
+        destination: /logo-background.html
