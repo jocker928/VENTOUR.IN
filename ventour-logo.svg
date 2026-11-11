@@ -1,10 +1,36 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 180" role="img" aria-labelledby="title">
-<title id="title">VENTOUR airplane and globe logo</title>
-<g fill="none" stroke="#fff" stroke-width="8" stroke-linecap="butt">
-  <path d="M22 86A66 66 0 0 1 88 20M101 20a66 66 0 0 1 66 66M155 103a66 66 0 0 1-49 48M84 150a66 66 0 0 1-62-64"/>
-  <circle cx="177" cy="86" r="64" stroke-width="8" stroke-dasharray="105 12 105 12" transform="rotate(-10 177 86)"/>
-  <circle cx="177" cy="86" r="48" stroke-width="5"/>
-</g>
-<path fill="#fff" d="M84 43c2-3 5-3 7 0l8 40 34 17c3 2 2 5-1 6l-34-5-3 35-8 7-8-7-3-35-34 5c-3-1-4-4-1-6l34-17 9-40z"/>
-<path fill="#fff" d="M158 57c7-8 17-13 29-14l-2 14 15 9-7 11-16-6-12 9-7-7 7-11-7-5zm-10 33 12-10 11 8-2 13-12 7-8-7zm26 12 14-7 12 9-2 13-12 7-12-8zm-23 23 14-9 12 6-1 11-13 4-10-4z"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 180" role="img" aria-labelledby="title desc">
+  <title id="title">VENTOUR travel logo</title>
+  <desc id="desc">A modern VENTOUR globe and airplane emblem in pink and blue.</desc>
+  <defs>
+    <linearGradient id="orbit" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#7dd3fc"/>
+      <stop offset="50%" stop-color="#f9a8d4"/>
+      <stop offset="100%" stop-color="#f000d8"/>
+    </linearGradient>
+    <linearGradient id="plane" x1="0%" x2="100%" y1="0%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f9d4ff"/>
+    </linearGradient>
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="0" stdDeviation="4" flood-color="#f000d8" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <g transform="translate(12 12)" filter="url(#softGlow)">
+    <circle cx="78" cy="78" r="62" fill="none" stroke="url(#orbit)" stroke-width="8"/>
+    <path d="M16 78h124M78 16v124M36 40c18 14 29 34 29 38s-11 24-29 38m84-76c-18 14-29 34-29 38s11 24 29 38" fill="none" stroke="url(#orbit)" stroke-width="5" stroke-linecap="round" opacity="0.9"/>
+    <circle cx="78" cy="78" r="18" fill="none" stroke="#ffffff" stroke-width="4" opacity="0.8"/>
+
+    <g transform="translate(64 40) rotate(16 54 40)">
+      <path d="M94 72L8 66L-8 55L17 50L62 7L82 10L70 45L110 40L128 48L110 54L90 72Z" fill="url(#plane)"/>
+      <path d="M74 10L92 39L61 46L41 27Z" fill="#f000d8" opacity="0.9"/>
+    </g>
+
+    <path d="M58 42c16-16 38-26 64-28" fill="none" stroke="#7dd3fc" stroke-width="4" stroke-linecap="round" opacity="0.8"/>
+  </g>
+
+  <g transform="translate(180 60)">
+    <text x="0" y="34" fill="#ffffff" font-size="34" font-weight="800" font-family="Arial, Helvetica, sans-serif" letter-spacing="3">VENTOUR</text>
+    <text x="2" y="66" fill="#f000d8" font-size="18" font-weight="700" font-family="Arial, Helvetica, sans-serif" letter-spacing="5">.IN</text>
+  </g>
 </svg>
