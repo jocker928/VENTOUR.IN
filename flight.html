@@ -14,9 +14,8 @@
     .flight-stage{position:sticky;top:0;height:100vh;min-height:600px;overflow:hidden;isolation:isolate;background:radial-gradient(ellipse at 70% 34%,#294b85aa 0,#17254a77 28%,transparent 68%)}
     .flight-stage:before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;opacity:.5;background-image:radial-gradient(2px 2px at 15% 28%,#fff 98%,transparent),radial-gradient(1px 1px at 62% 18%,#fff 98%,transparent),radial-gradient(2px 2px at 79% 64%,#a7f8ff 98%,transparent),radial-gradient(1px 1px at 32% 75%,#fff 98%,transparent),radial-gradient(1px 1px at 88% 31%,#fff 98%,transparent);background-size:380px 260px}
     header{position:absolute;z-index:5;top:0;left:0;right:0;display:flex;align-items:center;justify-content:space-between;padding:24px clamp(20px,7vw,100px)}
-    .brand{display:inline-flex;align-items:center;gap:12px;color:#fff;text-decoration:none;font-weight:800;letter-spacing:.08em}
-    .brand-logo{display:block;width:58px;height:44px;object-fit:contain}
-    .brand-name span{color:var(--pink)}
+    .brand{display:inline-flex;align-items:center;color:#fff;text-decoration:none;font-weight:800;letter-spacing:.08em}
+    .brand span{color:var(--pink)}
     header>a:last-child{color:#fff;text-decoration:none;border:1px solid #ffffff38;border-radius:999px;padding:11px 18px;font-size:13px;transition:background .2s,border-color .2s}
     header>a:last-child:hover{background:#ffffff16;border-color:var(--cyan)}
     .hero-copy{position:absolute;z-index:3;top:50%;left:clamp(24px,9vw,140px);width:min(43%,540px);transform:translateY(-50%)}
@@ -29,7 +28,7 @@
     .scroll-cue i{display:grid;place-items:center;width:30px;height:30px;border:1px solid #ffffff55;border-radius:50%;font-style:normal;animation:cue-bob 1.8s ease-in-out infinite}
     .takeoff-visual{position:absolute;z-index:2;right:clamp(10px,6vw,90px);top:50%;width:min(44vw,610px);height:min(58vh,470px);min-height:290px;transform:translateY(-45%);transform-origin:center;will-change:transform}
     .image-frame{position:absolute;inset:0;overflow:hidden;border:1px solid #ffffff30;border-radius:28px;background:#152947;box-shadow:0 35px 100px #0007,0 0 55px #31d8d022;clip-path:polygon(8% 0,100% 0,100% 86%,88% 100%,0 100%,0 12%)}
-    .image-frame img{display:block;width:100%;height:100%;object-fit:cover;object-position:center;filter:saturate(.88) brightness(.78);transform:scale(1.05);}
+    .image-frame img{display:block;width:100%;height:100%;object-fit:cover;object-position:center;filter:saturate(.88) brightness(.78);transform:scale(1.05)}
     .image-frame:after{content:"";position:absolute;inset:0;background:linear-gradient(135deg,#10224620 20%,transparent 48%,#080b1b99 100%),linear-gradient(0deg,#080b1b99,transparent 55%)}
     .image-label{position:absolute;z-index:2;left:25px;bottom:23px;color:#fff;font-size:11px;letter-spacing:.18em;text-transform:uppercase}
     .image-label span{display:block;margin-top:7px;color:#bbcadf;font-size:10px;letter-spacing:.08em;text-transform:none}
@@ -50,14 +49,17 @@
     .after-flight a{display:inline-block;padding:13px 22px;border-radius:999px;background:linear-gradient(135deg,var(--pink),#ff53bd);color:#fff;text-decoration:none;font-weight:700}
     @keyframes cloud-drift{from{translate:0 0}to{translate:calc(100vw + 600px) 0}}
     @keyframes cue-bob{0%,100%{transform:translateY(0)}50%{transform:translateY(5px)}}
-    @media(max-width:760px){.flight-stage{min-height:560px}.hero-copy{top:29%;left:7%;width:86%;transform:none}.hero-copy p{max-width:380px;font-size:14px}.takeoff-visual{top:auto;bottom:9%;right:7%;width:72vw;height:31vh;min-height:190px;transform:none}.image-frame{border-radius:20px}.flight-path{top:48%;right:5%;width:65vw;height:28vh}.scroll-cue{margin-top:14px}header{padding:16px 18px}.brand{gap:8px;font-size:13px}.brand-logo{width:45px;height:36px}}
+    @media(max-width:760px){.flight-stage{min-height:560px}.hero-copy{top:29%;left:7%;width:86%;transform:none}.hero-copy p{max-width:380px;font-size:14px}.takeoff-visual{top:auto;bottom:9%;right:7%;width:72vw;height:31vh;min-height:190px;transform:none}.image-frame{border-radius:20px}.flight-path{top:48%;right:5%;width:65vw;height:28vh}.scroll-cue{margin-top:14px}header{padding:16px 18px}.brand{font-size:13px}} 
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.scroll-cue i{animation:none}.cloud{animation:none}}
   </style>
 </head>
 <body>
   <section class="scene" id="takeoff-scene">
     <div class="flight-stage">
-      <header><a class="brand" href="index.html" aria-label="VENTOUR.IN home"><img class="brand-logo" src="logo.svg.svg" alt="VENTOUR logo"><span class="brand-name">VENTOUR<span>.IN</span></span></a><a href="index.html">← Back to home</a></header>
+      <header>
+        <div class="brand">VENTOUR<span>.IN</span></div>
+        <a href="index.html">← Back to home</a>
+      </header>
       <div class="cloud cloud-one" aria-hidden="true"></div><div class="cloud cloud-two" aria-hidden="true"></div><div class="cloud cloud-three" aria-hidden="true"></div>
       <div class="flight-path" aria-hidden="true"></div>
       <div class="hero-copy"><div class="eyebrow"><span class="pulse"></span> Your journey begins here</div><h1>READY FOR <span>TAKEOFF?</span></h1><p>Scroll to watch your journey take flight. Discover the world with VENTOUR, and let us help plan every mile.</p><div class="scroll-cue"><i>↓</i> Scroll slowly to take off</div></div>
